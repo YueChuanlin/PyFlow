@@ -1,0 +1,361 @@
+{
+    "name": "root",
+    "category": "",
+    "vars": [],
+    "nodes": [
+        {
+            "package": "PyFlowBase",
+            "lib": "MathAbstractLib",
+            "type": "abs",
+            "owningGraphName": "root",
+            "name": "abs",
+            "uuid": "1e2ad06b-92a9-43b2-9258-57253877fbfd",
+            "inputs": [
+                {
+                    "name": "inp",
+                    "package": "PyFlowBase",
+                    "fullName": "abs_inp",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": null,
+                    "uuid": "d30a8ef4-2ae5-4f2c-9983-88ea3572b9a8",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "inp",
+                        "wires": {}
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "out",
+                    "package": "PyFlowBase",
+                    "fullName": "abs_out",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "9728f099-ad00-44bb-ab4a-97e274cd742a",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "abs",
+                            "outPinId": 1,
+                            "rhsNodeName": "add",
+                            "inPinId": 1,
+                            "lhsNodeUid": "1e2ad06b-92a9-43b2-9258-57253877fbfd",
+                            "rhsNodeUid": "18d1de23-c571-41af-86fa-88a7ba576eaf"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "out",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "9728f099-ad00-44bb-ab4a-97e274cd742a",
+                                "destinationUUID": "c2cc6fc5-50a7-4350-bbbd-20b7a0bda0f0",
+                                "sourceName": "abs_out",
+                                "destinationName": "add_a",
+                                "uuid": "33253b4c-520b-4f30-93d5-2f03bb330030",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "abs"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\nhr { height: 1px; border-width: 0; }\nli.unchecked::marker { content: \"\\2610\"; }\nli.checked::marker { content: \"\\2612\"; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">abs</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -275.0,
+            "y": -137.0
+        },
+        {
+            "package": "PyFlowBase",
+            "lib": "MathAbstractLib",
+            "type": "add",
+            "owningGraphName": "root",
+            "name": "add",
+            "uuid": "18d1de23-c571-41af-86fa-88a7ba576eaf",
+            "inputs": [
+                {
+                    "name": "a",
+                    "package": "PyFlowBase",
+                    "fullName": "add_a",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": null,
+                    "uuid": "c2cc6fc5-50a7-4350-bbbd-20b7a0bda0f0",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "abs",
+                            "outPinId": 1,
+                            "rhsNodeName": "add",
+                            "inPinId": 1,
+                            "lhsNodeUid": "1e2ad06b-92a9-43b2-9258-57253877fbfd",
+                            "rhsNodeUid": "18d1de23-c571-41af-86fa-88a7ba576eaf"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "a",
+                        "wires": {
+                            "1": {
+                                "sourceUUID": "9728f099-ad00-44bb-ab4a-97e274cd742a",
+                                "destinationUUID": "c2cc6fc5-50a7-4350-bbbd-20b7a0bda0f0",
+                                "sourceName": "abs_out",
+                                "destinationName": "add_a",
+                                "uuid": "33253b4c-520b-4f30-93d5-2f03bb330030",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "b",
+                    "package": "PyFlowBase",
+                    "fullName": "add_b",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": null,
+                    "uuid": "c04e2b6e-334f-4830-993e-ba2add412619",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "abs1",
+                            "outPinId": 1,
+                            "rhsNodeName": "add",
+                            "inPinId": 2,
+                            "lhsNodeUid": "43f1dcc7-9b3e-4fbe-9943-94214dd88316",
+                            "rhsNodeUid": "18d1de23-c571-41af-86fa-88a7ba576eaf"
+                        }
+                    ],
+                    "pinIndex": 2,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "b",
+                        "wires": {
+                            "2": {
+                                "sourceUUID": "e04db54b-984b-4d9b-abbe-329e8042555d",
+                                "destinationUUID": "c04e2b6e-334f-4830-993e-ba2add412619",
+                                "sourceName": "abs1_out",
+                                "destinationName": "add_b",
+                                "uuid": "aa72ab78-05b6-4a8f-8ddb-48765ea4f725",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "out",
+                    "package": "PyFlowBase",
+                    "fullName": "add_out",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "822310cf-c565-4438-b3b5-8418832145ac",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "out",
+                        "wires": {}
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "add"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\nhr { height: 1px; border-width: 0; }\nli.unchecked::marker { content: \"\\2610\"; }\nli.checked::marker { content: \"\\2612\"; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">add</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -32.274182713394325,
+            "y": -83.73629086433026
+        },
+        {
+            "package": "PyFlowBase",
+            "lib": "MathAbstractLib",
+            "type": "abs",
+            "owningGraphName": "root",
+            "name": "abs1",
+            "uuid": "43f1dcc7-9b3e-4fbe-9943-94214dd88316",
+            "inputs": [
+                {
+                    "name": "inp",
+                    "package": "PyFlowBase",
+                    "fullName": "abs1_inp",
+                    "dataType": "AnyPin",
+                    "direction": 0,
+                    "value": null,
+                    "uuid": "19e69197-4d75-4780-91be-87f041ab092e",
+                    "linkedTo": [],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "inp",
+                        "wires": {}
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "out",
+                    "package": "PyFlowBase",
+                    "fullName": "abs1_out",
+                    "dataType": "AnyPin",
+                    "direction": 1,
+                    "value": null,
+                    "uuid": "e04db54b-984b-4d9b-abbe-329e8042555d",
+                    "linkedTo": [
+                        {
+                            "lhsNodeName": "abs1",
+                            "outPinId": 1,
+                            "rhsNodeName": "add",
+                            "inPinId": 2,
+                            "lhsNodeUid": "43f1dcc7-9b3e-4fbe-9943-94214dd88316",
+                            "rhsNodeUid": "18d1de23-c571-41af-86fa-88a7ba576eaf"
+                        }
+                    ],
+                    "pinIndex": 1,
+                    "options": [
+                        16,
+                        256
+                    ],
+                    "structure": 0,
+                    "alwaysList": false,
+                    "alwaysSingle": false,
+                    "alwaysDict": false,
+                    "wrapper": {
+                        "bLabelHidden": false,
+                        "displayName": "out",
+                        "wires": {
+                            "2": {
+                                "sourceUUID": "e04db54b-984b-4d9b-abbe-329e8042555d",
+                                "destinationUUID": "c04e2b6e-334f-4830-993e-ba2add412619",
+                                "sourceName": "abs1_out",
+                                "destinationName": "add_b",
+                                "uuid": "aa72ab78-05b6-4a8f-8ddb-48765ea4f725",
+                                "hOffsetL": "0.0",
+                                "hOffsetR": "0.0",
+                                "hOffsetLSShape": "0.0",
+                                "hOffsetRSShape": "0.0",
+                                "vOffset": "0.0",
+                                "vOffsetSShape": "0.0",
+                                "snapVToFirst": 1,
+                                "snapVToSecond": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "meta": {
+                "var": {},
+                "label": "abs1"
+            },
+            "wrapper": {
+                "collapsed": false,
+                "headerHtml": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\nhr { height: 1px; border-width: 0; }\nli.unchecked::marker { content: \"\\2610\"; }\nli.checked::marker { content: \"\\2612\"; }\n</style></head><body style=\" font-family:'Consolas'; font-size:6pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">abs1</p></body></html>",
+                "exposeInputsToCompound": false,
+                "groups": {
+                    "input": {},
+                    "output": {}
+                }
+            },
+            "x": -240.0,
+            "y": 38.0
+        }
+    ],
+    "depth": 1,
+    "isRoot": true,
+    "parentGraphName": "None",
+    "fileVersion": "3.0.0",
+    "activeGraph": "root"
+}

@@ -175,21 +175,25 @@ class PyFlow(QMainWindow):
         return self.menuBar
 
     def populateMenu(self):
-        fileMenu = self.menuBar.addMenu("File")
+        fileMenu = self.menuBar.addMenu("&File")
         newFileAction = fileMenu.addAction("New file")
         newFileAction.setIcon(QtGui.QIcon(":/new_file_icon.png"))
+        newFileAction.setShortcut("Ctrl+N")
         newFileAction.triggered.connect(self._clickNewFile)
 
         loadAction = fileMenu.addAction("Load")
         loadAction.setIcon(QtGui.QIcon(":/folder_open_icon.png"))
+        loadAction.setShortcut("Ctrl+O")
         loadAction.triggered.connect(self.load)
 
         saveAction = fileMenu.addAction("Save")
         saveAction.setIcon(QtGui.QIcon(":/save_icon.png"))
+        saveAction.setShortcut("Ctrl+S")
         saveAction.triggered.connect(self.save)
 
         saveAsAction = fileMenu.addAction("Save as")
         saveAsAction.setIcon(QtGui.QIcon(":/save_as_icon.png"))
+        saveAsAction.setShortcut("Ctrl+Shift+S")
         saveAsAction.triggered.connect(lambda: self.save(True))
 
         IOMenu = fileMenu.addMenu("Custom IO")
@@ -218,16 +222,16 @@ class PyFlow(QMainWindow):
                         )
                     )
 
-        editMenu = self.menuBar.addMenu("Edit")
+        editMenu = self.menuBar.addMenu("&Edit")
         preferencesAction = editMenu.addAction("Preferences")
         preferencesAction.setIcon(QtGui.QIcon(":/options_icon.png"))
         preferencesAction.triggered.connect(self.showPreferencesWindow)
 
-        pluginsMenu = self.menuBar.addMenu("Plugins")
+        pluginsMenu = self.menuBar.addMenu("&Plugins")
         packagePlugin = pluginsMenu.addAction("Create package...")
         packagePlugin.triggered.connect(PackageWizard.run)
 
-        helpMenu = self.menuBar.addMenu("Help")
+        helpMenu = self.menuBar.addMenu("&Help")
         helpMenu.addAction("Homepage").triggered.connect(
             lambda _=False, url="https://wonderworks-software.github.io/PyFlow/": QtGui.QDesktopServices.openUrl(
                 url
@@ -688,7 +692,7 @@ class PyFlow(QMainWindow):
 
                 if issubclass(ToolClass, DockTool):
                     menus = instance.menuBar.findChildren(QMenu)
-                    pluginsMenuAction = [m for m in menus if m.title() == "Plugins"][
+                    pluginsMenuAction = [m for m in menus if m.title() == "&Plugins"][
                         0
                     ].menuAction()
                     toolsMenu = getOrCreateMenu(instance.menuBar, "Tools")
