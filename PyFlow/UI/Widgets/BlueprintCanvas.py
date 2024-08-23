@@ -1975,7 +1975,8 @@ class BlueprintCanvas(CanvasBase):
         self.scene().addItem(uiConnection)
         self.connections[uiConnection.uid] = uiConnection
         # restore wire data
-        pinWrapperData = srcUiPin.wrapperJsonData
+        # pinWrapperData = srcUiPin.wrapperJsonData  # this is not correct, we need to get data from dst pin
+        pinWrapperData = dstUiPin.wrapperJsonData
         if pinWrapperData is not None:
             if "wires" in pinWrapperData:
                 wiresData = pinWrapperData["wires"]
